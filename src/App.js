@@ -1,9 +1,10 @@
 import "./App.css";
+import Square from "./components/Square";
 
 function App() {
   return (
     <div className="App">
-      <h1>Welcome</h1>
+      <Square value="X" onClick={() => alert("x")} />
     </div>
   );
 }
