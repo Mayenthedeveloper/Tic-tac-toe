@@ -38,15 +38,15 @@ export default class Game extends React.Component {
         squares: squares,
       }),
       xIsNext: !this.state.xIsNext,
-      stepNummber: history.length.length,
+      stepNummber: history.length,
     });
   }
   render() {
     const history = this.state.history;
-    const current = history[hhistory.length - 1];
+    const current = history[history.length - 1];
     const winner = calculateWinner(current.squares);
     const moves = history.map((step, move) => {
-      const desc = move ? "Go to #" + move : "Stat the Game";
+      const desc = move ? "Go to #" + move : "Start the Game";
       return (
         <li key={move}>
           <button
